@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <assert.h>
 
-int main(void) 
+int main(int argc, char** argv) 
 {
-	printf("Hello, World!"\n);
+	assert(argc==2 && "Only one argument allowed!");
+	printf("Hello, %s!\n", argv[1]);
 }
 
